@@ -3,11 +3,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <title>Lucas Clavijo - Portfolio</title>
 </head>
 <body>
     <header>
-        <nav></nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Lucas Clavijo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Sobre-mi">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Proyectos">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section id="Sobre-mi"> 
@@ -15,26 +36,35 @@
             <p>Técnico en Informática y Desarrollo Web por la UTU, capacitado en soporte de hardware, instalación de sistemas operativos y resolución de problemas técnicos bajo presión.  
             En constante aprendizaje enfocado en la Inteligencia Artificial. Busco un entorno laboral donde aplicar mis competencias técnicas, aportar soluciones prácticas y seguir creciendo profesionalmente.</p>
         </section>
-        <section id="Proyectos">
+        <section id="Proyectos" class="container">
             <h2>Proyectos</h2>
-            <article>
-                <h3>Calculadora de IMC</h3>
-                <p>Script en Python con validacion de datos.</p>
-                <a href="https://github.com/Novakronoo/Ejercicios-Python">Ver en Github</a>
-            </article>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                         <h5 class="card-title">Calculadora de IMC</h5>
+                         <p class="card-text">Script en Python con validación de datos.</p>
+                         <a href="https://github.com/Novakronoo/Ejercicios-Python" class="btn btn-primary">Ver en Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="Contacto">
             <h2>Contacto</h2>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje</label>
-            <textarea name="mensaje" id="mensaje"></textarea>
-
-            <button type="submit">Enviar</button>
+            <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </section>
     </main>
     <footer></footer>
